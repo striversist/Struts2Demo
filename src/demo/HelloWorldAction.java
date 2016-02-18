@@ -8,6 +8,7 @@ public class HelloWorldAction implements Action {
     
     @Override
     public String execute() throws Exception {
+        System.out.println("Inside action...");
         if ("secret".equals(name)) {
             return SUCCESS;
         } else {

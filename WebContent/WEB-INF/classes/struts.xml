@@ -6,12 +6,22 @@
     <constant name="struts.devMode" value="true" />
     <package name="helloworld" extends="struts-default">
 
+        <interceptors>
+            <interceptor name="myinterceptor" class="demo.MyInterceptor" />
+            <interceptor-stack name="customStack">
+                <interceptor-ref name="timer" />
+                <interceptor-ref name="myinterceptor" />
+            </interceptor-stack>
+        </interceptors>
+
         <action name="index">
             <result>/index.jsp</result>
         </action>
 
         <action name="hello" class="demo.HelloWorldAction"
             method="execute">
+            <interceptor-ref name="params" />
+            <interceptor-ref name="customStack" />
             <result name="success">/HelloWorld.jsp</result>
             <result name="error">/AccessDenied.jsp</result>
         </action>
