@@ -1,11 +1,18 @@
 package demo;
 
-public class HelloWorldAction {
+import com.opensymphony.xwork2.Action;
+
+public class HelloWorldAction implements Action {
 
     private String name;
     
+    @Override
     public String execute() throws Exception {
-        return "success";
+        if ("secret".equals(name)) {
+            return SUCCESS;
+        } else {
+            return ERROR;
+        }
     }
     
     public String getName() {
