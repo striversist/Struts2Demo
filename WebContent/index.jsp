@@ -11,10 +11,18 @@
 
 	<h1>Hello World From Struts2</h1>
 	<form action="hello">
-		<label for="name">Please enter your name</label><br /> 
+		<label for="name">Please enter your name</label>
 		<input type="text" name="name" />
 		<input type="submit" value="Say Hello" />
 	</form>
+	
+	<br />
+	<br />
 
+    <form action="upload" method="post" enctype="multipart/form-data">
+        <label for="myFile">Upload your file</label>
+        <input type="file" name="myFile" />
+        <input type="submit" value="Upload"/>
+    </form>
 </body>
 </html>
