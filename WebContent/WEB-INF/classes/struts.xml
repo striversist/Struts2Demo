@@ -28,9 +28,8 @@
         </action>
 
         <action name="upload" class="demo.UploadFileAction">
-            <interceptor-ref name="defaultStack" />
-            <interceptor-ref name="fileUpload">
-                <param name="allowedTypes">image/jpg,image/jpeg,image/gif,image/png </param>
+            <interceptor-ref name="defaultStack" >
+                <param name="fileUpload.allowedTypes">image/jpg,image/jpeg,image/gif,image/png</param>
             </interceptor-ref>
             <result name="success">/upload_success.jsp</result>
             <result name="error">/upload_error.jsp</result>
