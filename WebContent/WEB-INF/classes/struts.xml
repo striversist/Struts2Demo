@@ -34,5 +34,9 @@
             <result name="success">/upload_success.jsp</result>
             <result name="error">/upload_error.jsp</result>
         </action>
+        
+        <action name="system" class="demo.SystemDetails" method="execute">
+            <result name="success">/system.jsp</result>
+        </action>
     </package>
 </struts>
