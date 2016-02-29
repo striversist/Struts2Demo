@@ -22,15 +22,19 @@ public class DownloadAction extends ActionSupport {
                 "bufferSize", "4096"})
     })
     public String download() throws Exception {
+        System.out.println("GET PARAMETERS: downloadFileName=" + downloadFileName);
         File downloadFile = new File(FILE_PATH);
         fileInputStream = new FileInputStream(downloadFile);
-        downloadFileName = downloadFile.getName();
         
         return SUCCESS;
     }
     
     public InputStream getFileInputStream() {
         return fileInputStream;
+    }
+    
+    public void setDownloadFileName(String downloadFileName) {
+        this.downloadFileName = downloadFileName;
     }
     
     public String getDownloadFileName() {
