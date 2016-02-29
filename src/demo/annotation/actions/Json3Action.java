@@ -1,4 +1,4 @@
-package demo.actions;
+package demo.annotation.actions;
 
 import java.util.HashMap;
 import java.util.Map;

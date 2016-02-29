@@ -1,4 +1,4 @@
-package demo.actions;
+package demo.annotation.actions;
 
 import java.io.File;
 import java.io.FileInputStream;
