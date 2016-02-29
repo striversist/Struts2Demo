@@ -13,7 +13,7 @@ import com.opensymphony.xwork2.ActionSupport;
 public class Json3Action extends ActionSupport {
 	
 	private static final long serialVersionUID = 1L;
-	// 这里指定将被Struts2序列化的属性，该属性在action中必须有对应的getter方法
+	// 杩欓噷鎸囧畾灏嗚Struts2搴忓垪鍖栫殑灞炴�э紝璇ュ睘鎬у湪action涓繀椤绘湁瀵瑰簲鐨刧etter鏂规硶
 	private Map<String, Object> dataMap = new HashMap<>();
 
 	@Action(value="json3", results={@Result(type="json", params={"root", "dataMap"})})
